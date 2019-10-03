@@ -1,0 +1,220 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7169325969760342752
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7169325969760342754}
+  - component: {fileID: 7169325969760342753}
+  - component: {fileID: 7169325969760342755}
+  - component: {fileID: 2392370852771146110}
+  m_Layer: 0
+  m_Name: ClustersController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7169325969760342754
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325969760342752}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7169325971187575130}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7169325969760342753
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325969760342752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8beb53510df2d74b8cdc35fa84923bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxVisibleClusters: 15
+  releaseLineOffset: 5
+  downCount: {fileID: 11400000, guid: 9cdfbee72ee32e84fad1e6149205f669, type: 2}
+  swipesBotCount: {fileID: 11400000, guid: fa835841d077b0149b5c23016b405533, type: 2}
+  swipesTopCount: {fileID: 11400000, guid: e4896a1df0e256c4b820c2de41a27a25, type: 2}
+  currentLine: {fileID: 11400000, guid: 7d47c0ae2b0455b4bbfca0ef20ddbe8f, type: 2}
+  lastLine: {fileID: 11400000, guid: 3a0e2aac3655ade40b2951851ba00de8, type: 2}
+  clusters: {fileID: 11400000, guid: a3697472a61b4f042ac838769951543b, type: 2}
+  runtimeActiveClusters: {fileID: 11400000, guid: af9e06c334a4e1a40b81a15913581043,
+    type: 2}
+  clustersRoot: {fileID: 7169325971187575130}
+  clustersPool: {fileID: 7169325971187575131}
+  clusterObjects: []
+--- !u!114 &7169325969760342755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325969760342752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65beb00bed892fe4ab31c406158d2607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7630aa09a4324ce4abb8cd0a6ffdaba8, type: 2}
+  gameResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7169325969760342753}
+        m_MethodName: OnStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!114 &2392370852771146110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325969760342752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65beb00bed892fe4ab31c406158d2607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 114d76c24f3e89245a86f79d6a8d53d0, type: 2}
+  gameResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7169325969760342753}
+        m_MethodName: OnFinish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+--- !u!1 &7169325971187575129
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7169325971187575130}
+  - component: {fileID: 7169325971187575124}
+  - component: {fileID: 7169325971187575131}
+  - component: {fileID: 2072521206}
+  m_Layer: 0
+  m_Name: Clusters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7169325971187575130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325971187575129}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7169325969760342754}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7169325971187575124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325971187575129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6c47aca9e71d7f34fa48b2d90f70bb60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minX: -19
+  maxX: 19
+  downCount: {fileID: 11400000, guid: 9cdfbee72ee32e84fad1e6149205f669, type: 2}
+  swipesLeftCount: {fileID: 11400000, guid: a7edc29babf41184184b61e3095a07eb, type: 2}
+  swipesRightCount: {fileID: 11400000, guid: 7f9b17f2c0cf8f7468c742087ba2e44e, type: 2}
+  swipesBotCount: {fileID: 11400000, guid: fa835841d077b0149b5c23016b405533, type: 2}
+  swipesTopCount: {fileID: 11400000, guid: e4896a1df0e256c4b820c2de41a27a25, type: 2}
+  clustersRoot: {fileID: 7169325971187575130}
+--- !u!114 &7169325971187575131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325971187575129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4168758197b121a42a13442deed8e505, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  templates:
+  - {fileID: 4321394231949085642, guid: 5ffdd2e77ed3330408040bd7dab60805, type: 3}
+  - {fileID: 4321394231949085642, guid: 4b60e5c7a03c2a54980ea12caf4a3fd7, type: 3}
+  - {fileID: 4321394231949085642, guid: 03135867700c2a548a326a7c3c984036, type: 3}
+  - {fileID: 4321394231949085642, guid: 0e2d31962be85fb439c15e2a4f3b27f3, type: 3}
+  - {fileID: 4321394231949085642, guid: 6b13f268474130244a6f256f5eaa077a, type: 3}
+  - {fileID: 4321394231949085642, guid: 9f5bd200f56b63544ad63763f9fa7536, type: 3}
+--- !u!114 &2072521206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7169325971187575129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65beb00bed892fe4ab31c406158d2607, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 7630aa09a4324ce4abb8cd0a6ffdaba8, type: 2}
+  gameResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7169325971187575124}
+        m_MethodName: OnStart
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
